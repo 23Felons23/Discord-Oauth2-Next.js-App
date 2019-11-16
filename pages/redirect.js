@@ -1,5 +1,5 @@
 import React from 'react'
-import {exchangeToken, saveTokens} from "../public/oauth";
+import { exchangeToken, saveTokens } from "../public/oauth";
 import Router from 'next/router'
 import PropTypes from "prop-types";
 
@@ -17,11 +17,8 @@ export default class extends React.Component {
     async componentDidMount () {
         if (this.props.code === undefined)  await Router.push('/'); stop();
         const data = await exchangeToken(`${this.props.code}`);
-        console.log(data);
         if(data !== 400){
-            console.log(data.access_token,data.refresh_token);
             await saveTokens(data.access_token, data.refresh_token);
-            console.log(await saveTokens(data.access_token, data.refresh_token));
         }
         await Router.push('/');
     }

@@ -7,25 +7,18 @@ class Header extends React.Component {
     static propTypes = {
         isLoggedIn: PropTypes.bool
     };
+
     UNSAFE_componentWillMount() {
-        console.log("Props :",this.props);
         if(this.props.isLoggedIn){
-            console.log("ok1");
             return this.isLoggedIn = this.props.isLoggedIn;
         }else{
-            console.log("ok2");
             if(this.props.children) return this.isLoggedIn = this.props.children.isLoggedIn;
         }
     }
-
-    componentDidMount() {
-        console.log("Props after mount:",this.props);
-    }
-
+    
     render(){
         return(
             <nav>
-                {console.log(this.isLoggedIn)}
                 <ul>
                     <li>
                         <Link href="/">
@@ -66,7 +59,6 @@ class Header extends React.Component {
                             </li>
                             : ''
                     }
-
                 </ul>
             </nav>
         )

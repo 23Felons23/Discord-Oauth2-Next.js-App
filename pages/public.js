@@ -1,15 +1,11 @@
 import Template from '../public/template';
-import PropTypes from "prop-types";
 
-function Secret({loggedInUser}){
+function Public(){
     return(
         <div>
-            hello
+            This is the public page !
         </div>
     );
 }
-Secret.propTypes = {
-    loggedInUser: PropTypes.object
-};
 
-export default Template(Secret)
+export default Template(Public)

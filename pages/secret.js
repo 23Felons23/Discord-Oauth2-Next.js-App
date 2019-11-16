@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function Secret({loggedInUser}){
     return(
         <div>
-            { JSON.stringify(loggedInUser, null, 2) }
+            This is the secret page ! You can only see it when you are logged in !
         </div>
     );
 }
