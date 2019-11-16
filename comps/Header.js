@@ -15,7 +15,7 @@ class Header extends React.Component {
             if(this.props.children) return this.isLoggedIn = this.props.children.isLoggedIn;
         }
     }
-    
+
     render(){
         return(
             <nav>
