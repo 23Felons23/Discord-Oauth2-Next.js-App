@@ -11,9 +11,5 @@ function Secret({loggedInUser}){
 Secret.propTypes = {
     loggedInUser: PropTypes.object
 };
-/*Secret.getInitialProps = ({loggedInUser}) => {
-    console.log(loggedInUser);
-    return loggedInUser
-};*/
 
 export default Template(Secret)

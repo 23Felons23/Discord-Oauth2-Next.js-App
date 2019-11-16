@@ -17,15 +17,5 @@ const Home = props => (
 Home.propTypes = {
     isLoggedIn: PropTypes.bool
 };
-/*Home.getInitialProps = ({isLoggedIn}) => {
-    console.log(isLoggedIn);
-    if(isLoggedIn){
-        return{
-            isLoggedIn: isLoggedIn
-        }
-
-    }
-
-};*/
 
 export default template(Home);

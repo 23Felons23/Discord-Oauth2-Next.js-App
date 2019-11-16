@@ -9,7 +9,6 @@ class Header extends React.Component {
     };
     UNSAFE_componentWillMount() {
         console.log("Props :",this.props);
-        //this.isLoggedIn = this.props.isLoggedIn ? this.props.isLoggedIn : this.props.children.isLoggedIn;
         if(this.props.isLoggedIn){
             console.log("ok1");
             return this.isLoggedIn = this.props.isLoggedIn;
@@ -74,57 +73,5 @@ class Header extends React.Component {
 
     }
 }
-/*const Header = ({isLoggedIn}) => (
-    <nav>
-      {console.log(isLoggedIn)}
-      <ul>
-          <li>
-              <a>Home</a>
-          </li>
-          <li>
-              <Link href="/public">
-                  <a title={"Public"}>Public</a>
-              </Link>
-          </li>
-          { isLoggedIn ?
-              <li>
-                  <Link href="/guilds">
-                  <a title="My servers">Guilds Page</a>
-                  </Link>
-              </li>
-              :
-             <li>
-                 <a href={`https://discordapp.com/api/oauth2/authorize?client_id=${settings.clientID}&redirect_uri=${settings.redirect_uri}&response_type=code&scope=guilds`}>Login</a>
-             </li>
-          }
-          {
-               isLoggedIn ?
-                  <li>
-                      <Link href="/logout">
-                          <a title="Logout">Logout Page</a>
-                      </Link>
-                  </li>
-                  : ''
-          }
-          {
-              isLoggedIn ?
-                  <li>
-                      <Link href="/secret">
-                          <a title="Secret">Secret Page</a>
-                      </Link>
-                  </li>
-                  : ''
-          }
-
-      </ul>
-  </nav>
-);
-Header.propTypes = {
-    isLoggedIn: PropTypes.bool
-};
-/*Header.getInitialProps = ({isLoggedIn}) => {
-    console.log(isLoggedIn);
-    return isLoggedIn
-};*/
 
 export default Header;
