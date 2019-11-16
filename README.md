@@ -1,6 +1,6 @@
 # Discord-Oauth2-Next.js-App
 
-Simple Next.js App with Discord Oauth2 integrated. Used in Up discord bot.
+Simple Next.js App with Discord Oauth2 integrated.
 
 # Install
 
