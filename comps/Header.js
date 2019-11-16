@@ -38,7 +38,7 @@ class Header extends React.Component {
                         </li>
                         :
                         <li>
-                            <a href={`https://discordapp.com/api/oauth2/authorize?client_id=${settings.clientID}&redirect_uri=${settings.redirect_uri}&response_type=code&scope=guilds`}>Login</a>
+                            <a href={`https://discordapp.com/api/oauth2/authorize?client_id=${settings.clientID}&redirect_uri=${settings.redirect_uri}&response_type=code&scope=guilds%20identify`}>Login</a>
                         </li>
                     }
                     {
