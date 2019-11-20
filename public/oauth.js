@@ -3,7 +3,7 @@ import * as conf from '../settings';
 import axios from 'axios';
 
 async function exchangeToken(code) {
-    return await axios.post('https://discordapp.com/api/oauth2/token', `code=${code}&grant_type=authorization_code&client_id=${conf.clientID}&client_secret=${conf.clientSecret}&redirect_uri=${conf.redirect_uri}&scope=guilds`, {headers: {"Content-Type": "application/x-www-form-urlencoded"}}).then(
+    return await axios.post('https://discordapp.com/api/oauth2/token', `code=${code}&grant_type=authorization_code&client_id=${conf.clientID}&client_secret=${conf.clientSecret}&redirect_uri=${conf.redirect_uri}&scope=guilds%20identify`, {headers: {"Content-Type": "application/x-www-form-urlencoded"}}).then(
         (res) => {
             return res.data;
         }, error => {
@@ -15,7 +15,7 @@ async function exchangeToken(code) {
 }
 
 async function refreshToken( refreshToken ) {
-    const res = await axios.post('https://discordapp.com/api/oauth2/token', `refresh_token=${refreshToken}&grant_type=refresh_token&client_id=${conf.clientID}&client_secret=${conf.clientSecret}&redirect_uri=${conf.redirect_uri}&scope=guilds`, {headers: {"Content-Type": "application/x-www-form-urlencoded"}}).catch(console.error);
+    const res = await axios.post('https://discordapp.com/api/oauth2/token', `refresh_token=${refreshToken}&grant_type=refresh_token&client_id=${conf.clientID}&client_secret=${conf.clientSecret}&redirect_uri=${conf.redirect_uri}&scope=guilds%20identify`, {headers: {"Content-Type": "application/x-www-form-urlencoded"}}).catch(console.error);
     return res.data;
 }
 
